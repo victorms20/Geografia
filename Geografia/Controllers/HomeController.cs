@@ -28,5 +28,7 @@ namespace Geografia.Controllers
         }
 
         public ActionResult MapaCatalunya() => View();
+
+        public ActionResult Resultats() => View();
     }
 }
