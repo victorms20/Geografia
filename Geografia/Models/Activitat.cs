@@ -14,9 +14,6 @@ namespace Geografia.Models
         [Display(Name = "Nom Activitat")]
         public string NomActivitat { get; set; }
 
-        //Lista de diferentes Actividades
-        List<Activitat> TipusActivitat { get; set; } = new List<Activitat>();
-
         public virtual List<ActivitatAlumne> Activitats { get; set; } = new List<ActivitatAlumne>();
     }
 }

@@ -8,7 +8,7 @@ using System.Web;
 namespace Geografia.Models
 {
     public class ActivitatAlumne
-    {      
+    {
         [Key]
         public int Id_Alumne { get; set; }
         [ForeignKey("Id_Alumne")]
@@ -23,5 +23,7 @@ namespace Geografia.Models
         public DateTime Data { get; set; }
 
         public float Nota { get; set; }
+
+        public int Sortit {get; set;}
     }
 }

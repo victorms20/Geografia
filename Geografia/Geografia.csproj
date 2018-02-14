@@ -197,9 +197,6 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Activitat.cs" />
-    <Compile Include="Models\Activitat1.cs" />
-    <Compile Include="Models\Activitat2.cs" />
-    <Compile Include="Models\Activitat3.cs" />
     <Compile Include="Models\ActivitatAlumne.cs" />
     <Compile Include="Models\Alumne.cs" />
     <Compile Include="Models\IdentityModels.cs" />
