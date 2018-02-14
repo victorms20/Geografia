@@ -17,6 +17,7 @@ namespace Geografia.Models
         [MaxLength(40)]
         public string Cognoms { get; set; }
 
+        //Lista ActivitatsAlumne
         public virtual List<ActivitatAlumne> Activitats { get; set; } = new List<ActivitatAlumne>();
     }
 }
