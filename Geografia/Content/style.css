@@ -13,3 +13,8 @@
 .navbar-inverse .navbar-brand {
     margin-left: 33px !important;
 }
+
+#div_act_pregunta {
+    background-color: dimgray;
+    width: 100%;
+}

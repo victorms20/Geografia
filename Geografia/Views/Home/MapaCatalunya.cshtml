@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>  
-    <title>Hola</title>
-    <script src="../../Scripts/js/javascript.js"></script>
-</head>
-<body>
-    <h1>Test</h1>
-    <div>
-    <object id="map" data="../../svg/mapa.svg" type="image/svg+xml"></object>
-    </div>
-    <div>
+    <head>  
+        <title>Hola</title>
+        <link href="../Content/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="../Content/style.css" rel="stylesheet" media="screen">
+        <script src="../../Scripts/js/javascript.js"></script>
+    </head>
+
+    <body>  
+        <div id="div_act_pregunta">
+            <div class="row">
+                <div class="col-lg-3 "></div>
+                <div class="col-lg-3">
+                    <h4 id="h3Comarca"> Comarca: </h4>
+                </div>
+                <div class="col-lg-4">
+                    <h4 id="h3Capital"> Capital: </h4>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
         
-    </div>
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <object id="map" data="../../svg/mapa.svg" type="image/svg+xml"></object>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    
     </body>
 </html>
