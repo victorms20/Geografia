@@ -10,15 +10,8 @@ namespace Geografia.Models
     {
         [Key]
         public int Id { get; set; }
-
-        [MaxLength(20)]
-        public string Nom { get; set; }
-
-        [MaxLength(40)]
-        public string Cognoms { get; set; }
         
-        public string Usuari_Login { get; set; }
-        public string Password_Login { get; set; }
+        public string NickName { get; set; }
 
         //Lista ActivitatsAlumne
         public virtual List<ActivitatAlumne> Activitats { get; set; } = new List<ActivitatAlumne>();

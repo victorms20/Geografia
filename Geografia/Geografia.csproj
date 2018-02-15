@@ -207,6 +207,9 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\apcatGran.png" />
+    <Content Include="Content\Images\apcatPetit.png" />
+    <Content Include="Content\Images\apcatPetitGris.png" />
     <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -270,10 +273,10 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\MapaCatalunya.cshtml" />
     <Content Include="Views\Home\Resultats.cshtml" />
+    <Content Include="Views\Home\Qualificacions.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Imagenes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
