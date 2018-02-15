@@ -9,33 +9,30 @@
     <link rel="stylesheet" href="~/Content/style.css">
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top"  id="navbarstyle">
-        <div class="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbarstyle">
+        <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 @Html.ActionLink("LOGO", "Index", "Home", new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
+            
                 <ul class="nav navbar-nav" id="subnavbar">
                     <li id="textnavbar">@Html.ActionLink("Qualificacions", "Index", "Home")</li>
                     <li id="textnavbar">@Html.ActionLink("Resultats", "Resultats", "Home")</li>
                     <li id="textnavbar">@Html.ActionLink("Repas", "MapaCatalunya", "Home")</li>
                     <li id="textnavbar">@Html.ActionLink("Qui som", "About", "Home")</li>
                 </ul>
-               
-            </div>
+
+            
         </div>
-    </div>
+    </nav>
+
+  
+
+
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            
-        </footer>
+        <footer></footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
