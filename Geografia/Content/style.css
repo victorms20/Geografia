@@ -10,6 +10,6 @@
     color: white !important;
 }
 
-.rowstyle {
-    margin-left: -33px !important;
+.navbar-inverse .navbar-brand {
+    margin-left: 33px !important;
 }
