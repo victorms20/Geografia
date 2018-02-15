@@ -23,7 +23,5 @@ namespace Geografia.Models
         public DateTime Data { get; set; }
 
         public float Nota { get; set; }
-
-        public int Sortit {get; set;}
     }
 }
