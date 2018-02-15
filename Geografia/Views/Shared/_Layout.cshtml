@@ -9,28 +9,26 @@
     <link rel="stylesheet" href="~/Content/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbarstyle">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                
-                
-
-                <a class ="logoNavbar"href="#"><img src="~/Content/Images/apcatPetitGris.png" alt="aprengeografia.cat" class="logoPetit"></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"> @Html.ActionLink("LOGO", "Index", "Home", new { @class = "navbar-brand" })</a>
             </div>
-            
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav " id="subnavbar">
-                    <li id="textnavbar">@Html.ActionLink("Resultats", "Resultats", "Home")</li>
-                    <li id="textnavbar">@Html.ActionLink("Repas", "MapaCatalunya", "Home")</li>
-                    <li id="textnavbar">@Html.ActionLink("Qui som?", "About", "Home")</li>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Resultats", "Resultats", "Home")</li>
+                    <li>@Html.ActionLink("Repas", "MapaCatalunya", "Home")</li>
+                    <li>@Html.ActionLink("Qui som?", "About", "Home")</li>
                 </ul>
             </div>
-
-            
         </div>
     </nav>
-
-  
 
 
     <div class="container body-content">
