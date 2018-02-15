@@ -4,13 +4,12 @@
 
 .navbar-brand{
     color: white !important;
-    background-image: url("~/Imagenes/salir.png") !important;
 }
 
 .navbar-inverse .navbar-nav > li > a{
     color: white !important;
 }
 
-body {
-    background-image: url("~/Imagenes/salir.png");
+.claselogo {
+   
 }
