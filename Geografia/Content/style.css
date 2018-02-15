@@ -18,3 +18,7 @@
     background-color: dimgray;
     width: 100%;
 }
+
+.navbar-nav > li > a {
+    background-color:black;
+}
