@@ -19,10 +19,16 @@
     width: 100%;
 }
 
-.logoPetit {
-    width:50px;
+.logoNavbar {
+    margin-left: 15px;
+    margin-right:25px;
+    background: url(../Content/Images/apcatPetitGris.png) no-repeat top left;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-indent: -9999px;
 }
 
-.logoNavbar{
-    margin-left:15px;
+#menuSup {
+    background-color: #045a7f;
 }
