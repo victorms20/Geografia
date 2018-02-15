@@ -16,6 +16,20 @@ body {
 }
 
 #div_act_pregunta {
-    background-color: dimgray;
+    background-color: #E78C00;
     width: 100%;
 }
+
+.div_blanc {
+    background-color: white;
+    border: 1px solid black;
+    width: 60%;
+    font-size: 90%;
+    margin-left: 5px;
+
+}
+
+#h3Capital, #h3Comarca {
+    display: flex;
+}
+

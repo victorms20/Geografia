@@ -213,6 +213,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\backup_js_principal\javascript.js" />
+    <Content Include="Scripts\js\Act1_ClickComarca.js" />
     <Content Include="Scripts\js\javascript.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -232,6 +233,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="svg\mapa.svg" />
+    <None Include="Views\Home\Act1_ClickComarca.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

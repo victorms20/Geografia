@@ -30,5 +30,7 @@ namespace Geografia.Controllers
         public ActionResult MapaCatalunya() => View();
 
         public ActionResult Resultats() => View();
+
+        public ActionResult Act1_ClickComarca() => View();
     }
 }
