@@ -99,6 +99,17 @@ li:hover {
     text-align: center;
 }
 
+#marcador_encerts {
+background-color: dimgrey;
+border: 2px solid #045A7F;
+margin-top: 15%;
+}
+
+#barraProgress {
+margin-top:10px;
+}
+}
+
 .numero {color: #6281CC;}
 .nombre {color: #FF746C;}
 .email {color:#CCC03C;}
