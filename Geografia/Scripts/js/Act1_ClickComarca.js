@@ -25,7 +25,9 @@ function pintarMapa() {
         document.getElementById("map").contentDocument.getElementById("path" + IString).addEventListener('click', function (e) {
             var a = e.currentTarget.dataset.comarca;
             comprovarComarca(a, spplitedPath);
+            document.getElementById("marcador_encerts").innerHTML = "<h4> " + contadorPositiu + "/41 </h4>"  
             spplitedPath = obtenirComarca();
+            
         });
     }
 }

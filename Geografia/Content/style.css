@@ -97,3 +97,13 @@ li:hover {
     color: white;
     text-align: center;
 }
+
+#marcador_encerts {
+background-color: dimgrey;
+border: 2px solid #045A7F;
+margin-top: 15%;
+}
+
+#barraProgress {
+margin-top:10px;
+}
