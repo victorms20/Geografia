@@ -108,9 +108,13 @@ margin-top: 15%;
 #barraProgress {
 margin-top:10px;
 }
-}
 
 .numero {color: #6281CC;}
 .nombre {color: #FF746C;}
 .email {color:#CCC03C;}
 .calle {color:#CC732E;}
+
+#div_act_pregunta {
+    background-color: #FF750D;
+}
+
