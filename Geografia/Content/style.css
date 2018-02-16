@@ -70,9 +70,10 @@ li:hover {
 }
 
 .contacto {
-    border: solid 2px black;
+    /*border: solid 2px black;*/
     margin-bottom: 5px;
-    background-color: #045a7f;
+    color:white;
+    /*background-color: #045a7f;*/
     display:flex;
     flex-direction:column;
     text-align: center;
@@ -97,3 +98,8 @@ li:hover {
     color: white;
     text-align: center;
 }
+
+.numero {color: #6281CC;}
+.nombre {color: #FF746C;}
+.email {color:#CCC03C;}
+.calle {color:#CC732E;}
