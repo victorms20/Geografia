@@ -118,6 +118,12 @@ margin-top:10px;
     background-color: #FF750D;
 }
 
-.table-responsive {
-    background-color: #262626 !important;
+
+
+.imageActivitatDins{
+    width:150px;
+}
+
+.cosActivitat {
+    display:flex;
 }
