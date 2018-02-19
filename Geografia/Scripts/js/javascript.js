@@ -1,4 +1,6 @@
 function pintarMapa() {
+    document.getElementById("h3Comarca").innerHTML = "Comarca: " + '<div class="div_blanc">' + "</div>";
+    document.getElementById("h3Capital").innerHTML = "Capital: " + '<div class="div_blanc">' + "</div>";
 
 
     for(var i = 1; i<42;i++){
@@ -6,14 +8,14 @@ function pintarMapa() {
                   //  alert(document.getElementById("map").contentDocument);
         document.getElementById("map").contentDocument.getElementById("path"+IString).addEventListener('mouseover', function(e) {
             e.currentTarget.setAttribute('style', "fill: #ff7700");
-            document.getElementById("h3Comarca").innerHTML = "Comarca: " + e.currentTarget.dataset.comarca;
-            document.getElementById("h3Capital").innerHTML = "Capital: " + e.currentTarget.dataset.capital;
+            document.getElementById("h3Comarca").innerHTML = "Comarca: " + '<div class="div_blanc">' + e.currentTarget.dataset.comarca + "</div>";
+            document.getElementById("h3Capital").innerHTML = "Capital: " + '<div class="div_blanc">' + e.currentTarget.dataset.capital + "</div>";
         });
                     
         document.getElementById("map").contentDocument.getElementById("path"+IString).addEventListener('mouseout', function(e) {
-            e.currentTarget.setAttribute('style', "fill: #09e509; stroke-width: 1");
-            document.getElementById("h3Comarca").innerHTML = "Comarca: ";
-            document.getElementById("h3Capital").innerHTML = "Capital: ";
+            e.currentTarget.setAttribute('style', "fill: #086800; stroke-width: 1");
+            document.getElementById("h3Comarca").innerHTML = "Comarca: " + '<div class="div_blanc">' + "</div>";
+            document.getElementById("h3Capital").innerHTML = "Capital: " + '<div class="div_blanc">' + "</div>";
         });   
         
     }

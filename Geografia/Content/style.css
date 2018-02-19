@@ -1,4 +1,8 @@
-﻿#navbarstyle {
+﻿body {
+    background-color: #262626;
+}
+
+#navbarstyle {
     background-color: #045A7F;
 }
 
@@ -32,6 +36,87 @@
 #menuSup {
     background-color: #045a7f;
 }
+
+li:hover {
+    background-color: #26617F;
+}
+
+#textofaq {
+    text-align: center;
+    font-size: 25px;
+    border-radius: 10px;
+    border: solid 2px black;
+    color: white;
+    margin-top: 30px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.mundo1 {
+    margin-right: 30px;
+}
+
+.mundo2 {
+    margin-left: 30px;
+}
+
+.texto1 {
+    border: solid 2px black;
+    margin-bottom: 5px;
+    background-color: #045a7f;
+    padding: 20px;
+    text-align: justify;
+}
+
+.contacto {
+    /*border: solid 2px black;*/
+    margin-bottom: 5px;
+    color:white;
+    /*background-color: #045a7f;*/
+    display:flex;
+    flex-direction:column;
+    text-align: center;
+}
+.foto {
+    background-color: #999999;
+    border: solid 2px black;
+}
+
+.imglogo {
+    width: 100%;
+    height: 100%;
+}
+
+.suelo {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #3D3D3C;
+    color: white;
+    text-align: center;
+}
+
+#marcador_encerts {
+background-color: dimgrey;
+border: 2px solid #045A7F;
+margin-top: 15%;
+}
+
+#barraProgress {
+margin-top:10px;
+}
+
+.numero {color: #6281CC;}
+.nombre {color: #FF746C;}
+.email {color:#CCC03C;}
+.calle {color:#CC732E;}
+
+#div_act_pregunta {
+    background-color: #FF750D;
+}
+
 
 
 .imageActivitatDins{

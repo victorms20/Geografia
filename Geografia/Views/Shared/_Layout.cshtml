@@ -18,7 +18,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                 @Html.ActionLink("LOGO", "Index", "Home", new { @class = "logoNavbar" })
+                @Html.ActionLink("LOGO", "Index", "Home", new { @class = "logoNavbar" })
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
@@ -29,12 +29,13 @@
             </div>
         </div>
     </nav>
-
+    <div class="footer suelo">
+        <p></p>
+    </div>
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer></footer>
+        @*<hr />*@
     </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

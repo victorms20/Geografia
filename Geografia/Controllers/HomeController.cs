@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -31,6 +31,6 @@ namespace Geografia.Controllers
 
         public ActionResult Resultats() => View();
 
-        public ActionResult Qualificacions() => View();
+        public ActionResult Act1_ClickComarca() => View();
     }
 }

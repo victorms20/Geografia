@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Hola</title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../Content/style.css" rel="stylesheet" media="screen">
+    <script src="../../Scripts/js/Act1_ClickComarca.js"></script>
+</head>
+
+<body>
+    <div id="div_act_pregunta">
+        <div class="row">
+            <div class="col-lg-2 "></div>
+            <div class="col-lg-7">
+                <h4 id="h3Comarca"> Clicka sobre la comarca: </h4>
+            </div>
+            
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <object id="map" data="../../svg/mapa.svg" type="image/svg+xml"></object>
+        </div>
+
+        <div class="col-lg-2">
+            <div id="marcador_encerts"><h4>0/41</h4></div>
+            <div id="barraProgress" class="progress">
+                <div class="progress-bar progress-bar-info" role="progressbar"
+                     aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+                     style="width: 20%">
+                    <span class="sr-only">20% completado</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-1"></div>
+    </div>
+
+</body>
+</html>
