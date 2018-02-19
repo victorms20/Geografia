@@ -2,6 +2,8 @@
 var arrayComarques = [];
 var contadorPositiu = 0;
 var contadorNegatiu = 0;
+var incrementLinia = 2.4490243902439024390243902439024;
+var suma = 0;
 
 function pintarMapa() {
     ompleArray();
@@ -24,8 +26,13 @@ function pintarMapa() {
         //Afegim click Event
         document.getElementById("map").contentDocument.getElementById("path" + IString).addEventListener('click', function (e) {
             var a = e.currentTarget.dataset.comarca;
+            //Cridem a la funcio per comprovar si el que hem clicat és correcte
             comprovarComarca(a, spplitedPath);
-            document.getElementById("marcador_encerts").innerHTML = "<h4> " + contadorPositiu + "/41 </h4>"  
+            //Pintem el marcador
+            document.getElementById("marcador_encerts").innerHTML = "<h4> " + contadorPositiu + "/" + (contadorNegatiu + contadorPositiu) +" </h4 > ";
+            suma = suma + incrementLinia;
+            document.getElementById("barraProgress1").setAttribute('style', "width: " + suma + "%")
+            document.getElementById("progressBarra").innerHTML = suma.toFixed(0) +"%"
             spplitedPath = obtenirComarca();
             
         });
@@ -59,7 +66,7 @@ function obtenirComarca() {
     //Obtenim una comarca i el seu ID (path)
     var splitted = arrayComarques[random].split(";");
 
-    document.getElementById("h3Comarca").innerHTML = "Clicka sobre la comarca: " + '<div class="div_blanc">' + splitted[1] + "</div>";
+    document.getElementById("h3Comarca").innerHTML = "<h4>Clicka sobre la comarca: </h4>" + '<div class="div_blanc"><h4 id="h4style">' + splitted[1] + "</h4></div>";
     arrayComarques.splice(random, 1);
     var pathSplited = splitted[0];
 
