@@ -33,7 +33,7 @@
     text-indent: -9999px;
 }
 
-#menuSup {
+.menuSup {
     background-color: #045a7f;
 }
 
@@ -88,7 +88,7 @@ li:hover {
 }
 
 .suelo {
-    position: fixed;
+   position:fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -120,9 +120,23 @@ margin-top:10px;
 
 
 .imageActivitatDins{
-    width:150px;
+    width:250px;
+    
 }
 
 .cosActivitat {
     display:flex;
+    align-items:center;
+    text-align:justify;
+}
+
+.footer {
+    width:100%;
+    height:20px;
+}
+
+.botoActivitat {
+    width:100%;
+    margin-top:10px;
+    height:50px;
 }
