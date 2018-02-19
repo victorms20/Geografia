@@ -210,6 +210,9 @@
     <Content Include="Content\Images\apcatGran.png" />
     <Content Include="Content\Images\apcatPetit.png" />
     <Content Include="Content\Images\apcatPetitGris.png" />
+    <Content Include="Content\Images\primero.png" />
+    <Content Include="Content\Images\segundo.png" />
+    <Content Include="Content\Images\tercero.png" />
     <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

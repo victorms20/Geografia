@@ -148,15 +148,72 @@ margin-top:10px;
     background-color: transparent !important;
 }
 
-.top {
-    background-color: #966F2F;
-}
 
 .resultados {
-    background-color: #966F2F;
+    /*background-color: #966F2F;*/
 }
 
 .top {
     display:flex;
     flex-direction:column;
+}
+
+.tops {
+   display:flex;
+   margin: 5px;
+}
+
+.imagen {
+    width: 30%;
+    height:100%;
+    margin-top: 5px;
+}
+
+.infoganador {
+    width:100%;
+    height:100%;
+}
+
+.imagenpos {
+    width: 100%;
+    height: auto;
+}
+
+.nombreuser {width: 100%;}
+.nota {width: 100%;}
+.fecha {width: 100%;}
+
+.cuadradosinfo {
+    display:flex;
+    height: auto;
+    font-size: 12px;
+    color:white;
+}
+
+.clasedetallada {width: 100%;}
+
+.actividadinfo {
+    color:white;
+    text-align:center;
+}
+
+.styleinfo {
+    text-align:center;
+}
+
+.styletitulo {
+    background-color: #363A7F;
+    border-radius: 10px;
+    text-align: center;
+    margin: 2px 2px 2px 5px;
+
+}
+
+.tablainfo {
+    color:white;
+}
+
+.intuitivo {
+    color:white;
+    text-align:center;
 }
