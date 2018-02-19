@@ -32,3 +32,12 @@
 #menuSup {
     background-color: #045a7f;
 }
+
+
+.imageActivitatDins{
+    width:150px;
+}
+
+.cosActivitat {
+    display:flex;
+}
