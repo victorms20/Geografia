@@ -127,3 +127,16 @@ margin-top:10px;
 .cosActivitat {
     display:flex;
 }
+
+.con-resultados {
+    background-color: transparent !important;
+}
+
+.top {
+    background-color:red;
+}
+
+.resultados {
+    background-color: blue;
+
+}
