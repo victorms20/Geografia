@@ -33,7 +33,7 @@
     text-indent: -9999px;
 }
 
-#menuSup {
+.menuSup {
     background-color: #045a7f;
 }
 
@@ -45,7 +45,7 @@ li:hover {
     text-align: center;
     font-size: 25px;
     background-color: #26617F;
-    border-radius: 10px;
+    border-radius: 5px;
     border: solid 2px black;
     color: white;
     margin-top: 30px;
@@ -67,15 +67,16 @@ li:hover {
     background-color: #045a7f;
     padding: 20px;
     text-align: justify;
+    color:white;
 }
 
 .contacto {
     /*border: solid 2px black;*/
     margin-bottom: 5px;
-    color:white;
-    /*background-color: #045a7f;*/
-    display:flex;
-    flex-direction:column;
+    color: white;
+    background-color: #262626;
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
 .foto {
@@ -89,7 +90,7 @@ li:hover {
 }
 
 .suelo {
-    position: fixed;
+   position:fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -155,4 +156,45 @@ margin-top:10px;
     margin-left: 2%;
     width: 75%;
 
+}
+
+
+.imageActivitatDins{
+    width:250px;
+    
+}
+
+.cosActivitat {
+    display:flex;
+    align-items:center;
+    text-align:justify;
+}
+
+.footer {
+    width:100%;
+    height:20px;
+}
+
+.botoActivitat {
+    width:100%;
+    margin-top:10px;
+    height:50px;
+}
+
+
+.con-resultados {
+    background-color: transparent !important;
+}
+
+.top {
+    background-color: #966F2F;
+}
+
+.resultados {
+    background-color: #966F2F;
+}
+
+.top {
+    display:flex;
+    flex-direction:column;
 }
