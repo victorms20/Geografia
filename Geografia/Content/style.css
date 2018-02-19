@@ -44,7 +44,8 @@ li:hover {
 #textofaq {
     text-align: center;
     font-size: 25px;
-    border-radius: 10px;
+    background-color: #26617F;
+    border-radius: 5px;
     border: solid 2px black;
     color: white;
     margin-top: 30px;
@@ -71,10 +72,10 @@ li:hover {
 .contacto {
     /*border: solid 2px black;*/
     margin-bottom: 5px;
-    color:white;
-    /*background-color: #045a7f;*/
-    display:flex;
-    flex-direction:column;
+    color: white;
+    background-color: #262626;
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
 .foto {
@@ -117,3 +118,6 @@ margin-top:10px;
     background-color: #FF750D;
 }
 
+.table-responsive {
+    background-color: #262626 !important;
+}
