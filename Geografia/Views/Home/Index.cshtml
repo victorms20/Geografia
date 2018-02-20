@@ -14,12 +14,10 @@
 
         <div id="accordion">
             <div class="list-group-item llistaIndex">
-                <div id="headingOne">
-                    <h5 class="mb-0">
+                <div id="headingOne">                  
                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             <h2>Activitat 1</h2>
-                        </button>
-                    </h5>
+                        </button>                    
                 </div>
 
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
@@ -32,16 +30,18 @@
                         </div>
 
                     </div>
-                    @Html.ActionLink("Anar a l'activitat", "Act1_ClickComarca", "Home", new { @class = "btn btn-default botoActivitat" })
-                </div>
+                    <div class="topActivitats">
+                        @Html.ActionLink("Anar a l'activitat", "Act1_ClickComarca", "Home", new { @class = "btn btn-default botoActivitat" })
+                        @Html.ActionLink("Resultats", "Resultats", "Home", new { @class = "btn btn-default botoActivitat" })
+
+                    </div>
+                   </div>
             </div>
             <div class="list-group-item llistaIndex">
-                <div id="headingTwo">
-                    <h5 class="mb-0">
+                <div id="headingTwo">                   
                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             <h2>Activitat 2</h2>
-                        </button>
-                    </h5>
+                        </button>                   
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div class="cosActivitat">
@@ -53,17 +53,18 @@
                         </div>
 
                     </div>
-                    <button type="button" class="btn btn-success botoActivitat">Anar a l'activitat</button>
+                    <div class="topActivitats">
+                        @Html.ActionLink("Anar a l'activitat", "Act1_ClickComarca", "Home", new { @class = "btn btn-default botoActivitat" })
+                        @Html.ActionLink("Resultats", "Resultats", "Home", new { @class = "btn btn-default botoActivitat" })
+                    </div>
                 </div>
             </div>
         </div>
         <div class="list-group-item llistaIndex">
-            <div id="headingThree">
-                <h5 class="mb-0">
+            <div id="headingThree">               
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         <h2>Activitat 3</h2>
-                    </button>
-                </h5>
+                    </button>               
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                 <div class="cosActivitat">
@@ -75,7 +76,10 @@
                     </div>
 
                 </div>
-                <button type="button" class="btn btn-success botoActivitat">Anar a l'activitat</button>
+                <div class="topActivitats">
+                    @Html.ActionLink("Anar a l'activitat", "Act1_ClickComarca", "Home", new { @class = "btn btn-default botoActivitat" })
+                    @Html.ActionLink("Resultats", "Resultats", "Home", new { @class = "btn btn-default botoActivitat" })
+                </div>
             </div>
         </div>
     </div>
