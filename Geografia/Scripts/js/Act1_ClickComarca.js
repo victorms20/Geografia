@@ -1,4 +1,5 @@
 ﻿//Array que conté totes les comarques i el seu "id de path"
+
 var arrayComarques = [];
 var contadorPositiu = 0;
 var contadorNegatiu = 0;
@@ -61,17 +62,25 @@ function comprovarComarca(a, path) {
 function obtenirComarca() {
     var llargadaArray = arrayComarques.length;
     //Creem un random
-    var random = Math.floor(Math.random() * llargadaArray);
+    if (llargadaArray > 0) {
+        var random = Math.floor(Math.random() * llargadaArray);
 
-    //Obtenim una comarca i el seu ID (path)
-    var splitted = arrayComarques[random].split(";");
+        //Obtenim una comarca i el seu ID (path)
+        var splitted = arrayComarques[random].split(";");
 
-    document.getElementById("h3Comarca").innerHTML = "<h4>Clicka sobre la comarca: </h4>" + '<div class="div_blanc"><h4 id="h4style">' + splitted[1] + "</h4></div>";
-    arrayComarques.splice(random, 1);
-    var pathSplited = splitted[0];
+        document.getElementById("h3Comarca").innerHTML = "<h4>Clicka sobre la comarca: </h4>" + '<div class="div_blanc"><h4 id="h4style">' + splitted[1] + "</h4></div>";
+        arrayComarques.splice(random, 1);
+        var pathSplited = splitted[0];
 
-    return pathSplited;
-
+        return pathSplited;
+    }
+    else {
+        var notaFinal = (contadorPositiu * 10)/41;
+        notaFinal = notaFinal.toFixed(2);
+        $('#notaFinal').html("La teva nota és : " + notaFinal);
+        $('#modalFinal').modal('show');
+        return;
+    }
 }
 
 function ompleArray() {

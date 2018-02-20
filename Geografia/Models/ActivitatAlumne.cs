@@ -11,13 +11,13 @@ namespace Geografia.Models
     {
         [Key]
         public int NickAlumne { get; set; }
-        [ForeignKey("NickAlumne")]
-        virtual public Alumne Alumne { get; set; }
+        //[ForeignKey("NickAlumne")]
+        //virtual public Alumne Alumne { get; set; }
 
         [Key]
-        public int NickActivitat { get; set; }
-        [ForeignKey("NickActivitat")]
-        virtual public Activitat Activitat { get; set; }
+        public int NomActivitat { get; set; }
+        //[ForeignKey("NickActivitat")]
+        //virtual public Activitat Activitat { get; set; }
 
         [Key]
         public DateTime Data { get; set; }

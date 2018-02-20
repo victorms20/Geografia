@@ -196,9 +196,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Activitat.cs" />
+    <Content Include="PostModels\Activitat.txt" />
     <Compile Include="Models\ActivitatAlumne.cs" />
-    <Compile Include="Models\Alumne.cs" />
+    <Content Include="PostModels\Alumne.txt" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

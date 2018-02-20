@@ -10,7 +10,7 @@ namespace Geografia.Models
     {
         [Key]
         [Display(Name = "Nom Activitat")]
-        public string NomActivitat { get; set; }
+        public string Nom { get; set; }
 
         public virtual List<ActivitatAlumne> Activitats { get; set; } = new List<ActivitatAlumne>();
     }

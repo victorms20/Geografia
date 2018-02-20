@@ -3,7 +3,7 @@ function pintarMapa() {
     document.getElementById("h4Capital").innerHTML = "<h4>Capital: </h4>";
 
 
-    for(var i = 1; i<42;i++){
+    for(var i = 1; i<41;i++){
         var IString = i.toString();
                   //  alert(document.getElementById("map").contentDocument);
         document.getElementById("map").contentDocument.getElementById("path"+IString).addEventListener('mouseover', function(e) {
@@ -19,11 +19,6 @@ function pintarMapa() {
         });   
         
     }
-}
-
-//Funcio Activitat 1: Apareix un nom de comarca i has de clicar sobre ella.
-function activitat1 (){
-    
 }
 
 window.onload = pintarMapa;
