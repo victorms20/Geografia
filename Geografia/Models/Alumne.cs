@@ -9,8 +9,7 @@ namespace Geografia.Models
     public class Alumne
     {
         [Key]
-        public int Id { get; set; }
-        
+        [MaxLength(19)]
         public string NickName { get; set; }
 
         //Lista ActivitatsAlumne
