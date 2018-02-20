@@ -176,9 +176,19 @@ margin-top:10px;
 }
 
 .botoActivitat {
-    width:100%;
-    margin-top:10px;
-    height:50px;
+    width: 100%;
+    margin-top: 10px;
+    height: 50px;
+    padding-top: 14px;
+    background-color: #363a7f;
+    border-color: #363a7f;
+    color:white;
+}
+
+.btn-default:hover {
+    background-color: #43467F !important;
+    border-color: #43467F !important;
+    color: white;
 }
 
 
@@ -254,4 +264,16 @@ margin-top:10px;
 .intuitivo {
     color:white;
     text-align:center;
+}
+
+.llistaIndex {
+    background-color:#262626;
+    color:white;
+    font-size:15px;
+    
+}
+
+.logoIndex {
+    margin:auto;
+    width:300px;
 }
