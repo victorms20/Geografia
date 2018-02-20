@@ -9,8 +9,6 @@ namespace Geografia.Models
     public class Activitat
     {
         [Key]
-        public int Id { get; set; }
-
         [Display(Name = "Nom Activitat")]
         public string NomActivitat { get; set; }
 
