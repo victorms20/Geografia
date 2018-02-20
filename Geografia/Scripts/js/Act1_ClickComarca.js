@@ -77,7 +77,7 @@ function obtenirComarca() {
     else {
         var notaFinal = (contadorPositiu * 10)/41;
         notaFinal = notaFinal.toFixed(2);
-        $('#notaFinal').html("La teva nota és : " + notaFinal);
+        $('#notaFinal').html("<b>Has encertat " + contadorPositiu + ' de 41, la teva nota és: <span class="badge badge-secondary" >' + notaFinal + '</span ></b>');
         $('#modalFinal').modal('show');
         return;
     }
