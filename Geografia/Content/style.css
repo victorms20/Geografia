@@ -162,8 +162,7 @@ margin-top:10px;
 
 
 .imageActivitatDins{
-    width:250px;
-    
+    width:100%;
 }
 
 .cosActivitat {
@@ -334,4 +333,8 @@ margin-top:10px;
     margin: auto;
     display: flex;
     justify-content: center;
+}
+
+.topActivitats {
+    display:flex;
 }
