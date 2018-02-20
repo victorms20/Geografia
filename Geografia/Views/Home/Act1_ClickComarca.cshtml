@@ -5,13 +5,39 @@
     <link href="../Content/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../Content/style.css" rel="stylesheet" media="screen">
     <script src="../../Scripts/js/Act1_ClickComarca.js"></script>
+    <script src="../../Scripts/jquery-1.10.2.min.js"></script>
 </head>
 
 <body>
+    <div id="modalFinal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <p id="notaFinal">La nota de l'activitat és: </p>
+                        <br />
+                        Inserta el nick<br>
+                        <input type="text" name="nickName" value="Nickname">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="div_act_pregunta">
         <div class="row">
             <div class="col-lg-2 "></div>
-            <div class="col-lg-8 asdf">
+            <div class="col-lg-8">
                 <div id="h3Comarca"> <h4>Clicka sobre la comarca: </h4> </div>
             </div>
             

@@ -21,6 +21,7 @@
 #div_act_pregunta {
     background-color: dimgray;
     width: 100%;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .logoNavbar {
@@ -176,9 +177,19 @@ margin-top:10px;
 }
 
 .botoActivitat {
-    width:100%;
-    margin-top:10px;
-    height:50px;
+    width: 100%;
+    margin-top: 10px;
+    height: 50px;
+    padding-top: 14px;
+    background-color: #363a7f;
+    border-color: #363a7f;
+    color:white;
+}
+
+.btn-default:hover {
+    background-color: #43467F !important;
+    border-color: #43467F !important;
+    color: white;
 }
 
 
@@ -284,6 +295,21 @@ margin-top:10px;
     width: 100%;
     height:auto;
     text-align:center;
+}
+
+.llistaIndex {
+    background-color:#262626;
+    color:white;
+    text-align:center;
+}
+    font-size:15px;
+    
+}
+
+.logoIndex {
+    margin:auto;
+    width:300px;
+}
     font-size: 15px;
     background-color: black;
     margin: 1px;

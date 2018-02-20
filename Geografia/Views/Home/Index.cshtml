@@ -6,11 +6,14 @@
 
 <div class="container">
 
+    <img src="~/Content/Images/apcatGran.png" class="logoIndex img-responsive" />
+
+
 
     <div class="jumbotron">
 
         <div id="accordion">
-            <div class="list-group-item">
+            <div class="list-group-item llistaIndex">
                 <div id="headingOne">
                     <h5 class="mb-0">
                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -27,12 +30,12 @@
                         <div class="imageActivitat col-sm-4 ">
                             <img src="~/Content/Images/apcatGran.png" class="imageActivitatDins img-responsive" />
                         </div>
-                            
+
                     </div>
-                    <button type="button" class="btn btn-success botoActivitat">Anar a l'activitat</button>
+                    @Html.ActionLink("Anar a l'activitat", "Act1_ClickComarca", "Home", new { @class = "btn btn-default botoActivitat" })
                 </div>
             </div>
-            <div class="list-group-item">
+            <div class="list-group-item llistaIndex">
                 <div id="headingTwo">
                     <h5 class="mb-0">
                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -53,8 +56,8 @@
                     <button type="button" class="btn btn-success botoActivitat">Anar a l'activitat</button>
                 </div>
             </div>
-            </div>
-        <div class="list-group-item">
+        </div>
+        <div class="list-group-item llistaIndex">
             <div id="headingThree">
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -75,8 +78,8 @@
                 <button type="button" class="btn btn-success botoActivitat">Anar a l'activitat</button>
             </div>
         </div>
-            </div>
-        </div>
+    </div>
+</div>
 
 
     </div>
