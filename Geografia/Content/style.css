@@ -293,8 +293,11 @@ margin-top:10px;
 
 .miniinfo {
     width: 100%;
-    height:auto;
-    text-align:center;
+    height: auto;
+    text-align: center;
+    font-size: 15px;
+    background-color: black;
+    margin: 1px;
 }
 
 .llistaIndex {
@@ -302,16 +305,9 @@ margin-top:10px;
     color:white;
     text-align:center;
 }
-    font-size:15px;
-    
-}
 
 .logoIndex {
     margin:auto;
     width:300px;
-}
-    font-size: 15px;
-    background-color: black;
-    margin: 1px;
 }
 
