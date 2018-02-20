@@ -75,9 +75,9 @@ function obtenirComarca() {
         return pathSplited;
     }
     else {
-        var notaFinal = (contadorPositiu * 10) / 41;
-        var notafinal = notaFinal.toFixed(2);
-        $('#notaFinal').innerHTML = "La teva nota és : " + notaFinal; 
+        var notaFinal = (contadorPositiu * 10)/41;
+        notaFinal = notaFinal.toFixed(2);
+        $('#notaFinal').html("La teva nota és : " + notaFinal);
         $('#modalFinal').modal('show');
         return;
     }

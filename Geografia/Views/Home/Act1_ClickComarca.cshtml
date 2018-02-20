@@ -13,18 +13,16 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title"></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <h5 id="notaFinal" class="modal-title">La nota de l'activitat és:</h5>
+                    
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <p id="notaFinal">La nota de l'activitat és: </p>
-                        <br />
-                        Inserta el nick<br>
-                        <input type="text" name="nickName" value="Nickname">
-                    </form>
+                    <form action="/action_page.php">
+                        <div class="form-group">
+                            <label for="email">Inserta el teu nick:</label>
+                            <input type="email" class="form-control" id="email" placeholder="NickName">
+                        </div>
+                    </form> 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary">Save changes</button>
