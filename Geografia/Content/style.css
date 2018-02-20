@@ -115,6 +115,7 @@ margin-top:10px;
 .nombre {color: #FF746C;}
 .email {color:#CCC03C;}
 .calle {color:#CC732E;}
+.indextitulo {color:#428bca !important}
 
 #div_act_pregunta {
     background-color: #FF750D;
@@ -184,6 +185,7 @@ margin-top:10px;
     background-color: #363a7f;
     border-color: #363a7f;
     color:white;
+    margin: 2px;
 }
 
 .btn-default:hover {
@@ -200,7 +202,7 @@ margin-top:10px;
 
 .top {
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
 }
 
 .tops {
@@ -296,7 +298,8 @@ margin-top:10px;
     height: auto;
     text-align: center;
     font-size: 15px;
-    background-color: black;
+    color:black;
+    background-color: white;
     margin: 1px;
 }
 
