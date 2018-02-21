@@ -13,14 +13,14 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div id="bodyModal" class="modal-body">
-                    <form action="/action_page.php">
+                    <form action="@Url.Action("Resultats","Home")" method="post">
                         <div class="form-group">
                             <h5 id="notaFinal"><span class="badge badge-secondary"></span></h5>
                             <br />
                             <label for="email">Inserta el teu nick:</label>
-                            <input type="email" class="form-control" id="email" placeholder="NickName">
+                            <input type="text" name="nick" class="form-control" id="nick" placeholder="NickName">
                         </div>
-                        <button id="enviarStats" type="button" class="btn btn-primary">Enviar</button>
+                        <button id="enviarStats" type="submit" class="btn btn-primary">Enviar</button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">No enviar</button>
                     </form> 
                 </div>
