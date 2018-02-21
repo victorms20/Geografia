@@ -1,13 +1,42 @@
 ﻿//Array que conté totes les comarques i el seu "id de path"
-
 var arrayComarques = [];
 var contadorPositiu = 0;
 var contadorNegatiu = 0;
-var incrementLinia = 2.4490243902439024390243902439024;
+var puntPerEncert = 2.4490243902439024390243902439024;
 var suma = 0;
 
-function demanarCapital{
-    
+function pintarMapa() {
+    ompleArray();
+    var spplitedPath = obtenirComarca();
+
+    //For per afegir event listener a totes les comarques del svg
+    for (var i = 1; i < 42; i++) {
+        var IString = i.toString();
+
+        //Afegim Mouseover
+        document.getElementById("map").contentDocument.getElementById("path" + IString).addEventListener('mouseover', function (e) {
+            e.currentTarget.setAttribute('style', "fill: #ff7700");
+        });
+
+        //Afegim MouseOut
+        document.getElementById("map").contentDocument.getElementById("path" + IString).addEventListener('mouseout', function (e) {
+            e.currentTarget.setAttribute('style', "fill: #086800; stroke-width: 1");
+        });
+
+        //Afegim click Event
+        document.getElementById("map").contentDocument.getElementById("path" + IString).addEventListener('click', function (e) {
+            var a = e.currentTarget.dataset.comarca;
+            //Cridem a la funcio per comprovar si el que hem clicat és correcte
+            comprovarComarca(a, spplitedPath);
+            //Pintem el marcador
+            document.getElementById("marcador_encerts").innerHTML = "<h4> " + contadorPositiu + "/" + (contadorNegatiu + contadorPositiu) + " </h4 > ";
+            suma = suma + puntPerEncert;
+            document.getElementById("barraProgress1").setAttribute('style', "width: " + suma + "%")
+            document.getElementById("progressBarra").innerHTML = suma.toFixed(0) + "%"
+            spplitedPath = obtenirComarca();
+
+        });
+    }
 }
 
 function comprovarComarca(a, path) {
@@ -45,9 +74,9 @@ function obtenirComarca() {
         return pathSplited;
     }
     else {
-        var notaFinal = (contadorPositiu * 10)/41;
+        var notaFinal = (contadorPositiu * 10) / 41;
         notaFinal = notaFinal.toFixed(2);
-        $('#notaFinal').html("<b>Has encertat " + contadorPositiu + ' de 41, la teva nota és: <span id="notaActivitat" class="badge badge-secondary" >' + notaFinal + '</span ></b>');
+        $('#notaFinal').html("<b>Has encertat " + contadorPositiu + ' de 41, la teva nota és: <span class="badge badge-secondary" >' + notaFinal + '</span ></b>');
         $('#modalFinal').modal('show');
         return;
     }
@@ -58,8 +87,8 @@ function ompleArray() {
         var IString = i.toString();
         var com = document.getElementById("map").contentDocument.getElementById("path" + IString).dataset.comarca;
 
-        arrayComarques.push("path" + IString + ";" +  com);
-    }
+        arrayComarques.push("path" + IString + ";" + com);
 
+    }
 }
 window.onload = pintarMapa;
