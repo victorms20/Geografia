@@ -10,16 +10,16 @@ namespace Geografia.Models
     public class ActivitatAlumne
     {
         [Key]
-        public int NickAlumne { get; set; }
+        public int Id { get; set; }
+
+        public string NickAlumne { get; set; }
         //[ForeignKey("NickAlumne")]
         //virtual public Alumne Alumne { get; set; }
 
-        [Key]
-        public int NomActivitat { get; set; }
+        public string NomActivitat { get; set; }
         //[ForeignKey("NickActivitat")]
         //virtual public Activitat Activitat { get; set; }
 
-        [Key]
         public DateTime Data { get; set; }
 
         public float Nota { get; set; }

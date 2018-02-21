@@ -29,5 +29,12 @@ namespace Geografia.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<ActivitatAlumne> ActivitatsAlumne { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

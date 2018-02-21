@@ -10,6 +10,10 @@ namespace Geografia.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ApplicationDbContext dBContext = new ApplicationDbContext();
+
+        public HomeController() { }
+
         public ActionResult Index()
         {
             return View();
@@ -33,14 +37,27 @@ namespace Geografia.Controllers
 
         public ActionResult Resultats() => View();
 
-        public ActionResult Act1_ClickComarca() => View();
+        public ActionResult Act1_ClickComarca()
+        {
+            return View(new ActivitatAlumne());
+        }
 
         public ActionResult Activitat2() => View();
 
-        //[HttpPost]
-        //public ActionResult CreateNick(string nick)
-        //{
-            
-        //}
+        [HttpPost]
+        public ActionResult CreateNick(string nick)
+        {
+            var nombre = nick;
+            ActivitatAlumne alumne = new ActivitatAlumne
+            {
+                NickAlumne = nick,
+                NomActivitat = "Activitat 1",
+                Data = DateTime.Now,
+                Nota = 5
+            };
+            dBContext.ActivitatsAlumne.Add(alumne);
+            dBContext.SaveChanges();
+            return View("Resultats");
+        }
     }
 }
