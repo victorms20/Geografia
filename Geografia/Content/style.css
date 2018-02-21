@@ -162,11 +162,15 @@ margin-top:10px;
 
 
 .imageActivitat{
-    width:100%;
+    width:auto;
 }
 
 .imageActivitatDins {
     width:100%;
+}
+
+.textActivitat {
+    width: 100%;
     height: 100%;
 }
 
@@ -350,3 +354,4 @@ margin-top:10px;
 .topActivitats {
     display:flex;
 }
+
