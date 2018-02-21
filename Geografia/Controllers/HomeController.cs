@@ -35,6 +35,8 @@ namespace Geografia.Controllers
 
         public ActionResult Act1_ClickComarca() => View();
 
+        public ActionResult Activitat2() => View();
+
         [HttpPost]
         public ActionResult CreateNick(string nick)
         {
