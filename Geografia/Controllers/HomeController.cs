@@ -37,10 +37,10 @@ namespace Geografia.Controllers
 
         public ActionResult Activitat2() => View();
 
-        [HttpPost]
-        public ActionResult CreateNick(string nick)
-        {
+        //[HttpPost]
+        //public ActionResult CreateNick(string nick)
+        //{
             
-        }
+        //}
     }
 }
