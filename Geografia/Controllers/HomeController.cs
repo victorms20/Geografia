@@ -1,5 +1,7 @@
+using Geografia.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -32,5 +34,11 @@ namespace Geografia.Controllers
         public ActionResult Resultats() => View();
 
         public ActionResult Act1_ClickComarca() => View();
+
+        [HttpPost]
+        public ActionResult CreateNick(string nick)
+        {
+            
+        }
     }
 }

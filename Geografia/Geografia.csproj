@@ -196,6 +196,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Content Include="Content\Images\ac2.png" />
+    <Content Include="Content\Images\act1.png" />
     <Content Include="PostModels\Activitat.txt" />
     <Compile Include="Models\ActivitatAlumne.cs" />
     <Content Include="PostModels\Alumne.txt" />
