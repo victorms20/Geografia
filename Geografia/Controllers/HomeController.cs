@@ -1,6 +1,7 @@
 using Geografia.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Diagnostics;
 using System.Linq;
 using System.Web;
@@ -35,7 +36,7 @@ namespace Geografia.Controllers
 
         public ActionResult MapaCatalunya() => View();
 
-        public ActionResult Resultats() => View();
+        public ActionResult Resultats() => View(dBContext.ActivitatsAlumne);
 
         public ActionResult Act1_ClickComarca()
         {

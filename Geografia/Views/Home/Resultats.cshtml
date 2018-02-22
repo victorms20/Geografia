@@ -5,6 +5,7 @@
 <body>
 
     <div class="jumbotron con-resultados">
+        @model IEnumerable<Geografia.Models.ActivitatAlumne>
         <div class="col-sm-3 top">
             <div class="intuitivo">
                 <div>TOP 3 Activitats</div>
@@ -81,24 +82,15 @@
                 <div class="minititulo">Data</div>
             </div>
             <div class="inforesul">
-                <div class="infogrande">
-                    <div class="miniinfo">maria777</div>
-                    <div class="miniinfo">Activitat 2</div>
-                    <div class="miniinfo"> 7.75</div>
-                    <div class="miniinfo">02/02/2018</div>
-                </div>
-                <div class="infogrande">
-                    <div class="miniinfo">Jordi69</div>
-                    <div class="miniinfo">Activitat 1</div>
-                    <div class="miniinfo"> 7.73</div>
-                    <div class="miniinfo">02/03/2018</div>
-                </div>
-                <div class="infogrande">
-                    <div class="miniinfo">Raoh117</div>
-                    <div class="miniinfo">Activitat 2</div>
-                    <div class="miniinfo"> 2.33</div>
-                    <div class="miniinfo">03/03/2018</div>
-                </div>                
+                @foreach (var activitat in Model)
+                {
+                    <div class="infogrande">
+                        <div class="miniinfo">@activitat.NickAlumne</div>
+                        <div class="miniinfo">Activitat 2</div>
+                        <div class="miniinfo"> 2.33</div>
+                        <div class="miniinfo">03/03/2018</div>
+                    </div>
+                }
             </div>
         </div>
     </div>
