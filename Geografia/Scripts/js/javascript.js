@@ -20,5 +20,4 @@ function pintarMapa() {
 
     }
 }
-
 window.onload = pintarMapa;
