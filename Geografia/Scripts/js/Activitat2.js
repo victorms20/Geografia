@@ -71,11 +71,12 @@ function ompleArray() {
 }
 
 function prova() {
-    document.getElementById("capitalUsuari").onkeydown = function (e) {
+    document.getElementById("capitalUsuari").addEventListener('keypress', function (e) {
         if (e.keyCode == 13) {
+            e.preventDefault();
             comprovarComarca();
         }
-    };
+    });
 }
 
 
