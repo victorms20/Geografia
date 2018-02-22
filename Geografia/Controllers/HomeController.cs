@@ -45,19 +45,17 @@ namespace Geografia.Controllers
         public ActionResult Activitat2() => View();
 
         [HttpPost]
-        public ActionResult CreateNick(string nick)
+        public ActionResult CreateNick([Bind(Include = "Nota,NickAlumne,NomActivitat,Data")] ActivitatAlumne activitatAlumne)
         {
-            var nombre = nick;
-            ActivitatAlumne alumne = new ActivitatAlumne
+            var activitat = activitatAlumne;
+            if (ModelState.IsValid)
             {
-                NickAlumne = nick,
-                NomActivitat = "Activitat 1",
-                Data = DateTime.Now,
-                Nota = 5
-            };
-            dBContext.ActivitatsAlumne.Add(alumne);
-            dBContext.SaveChanges();
-            return View("Resultats");
+                dBContext.ActivitatsAlumne.Add(activitatAlumne);
+                dBContext.SaveChanges();
+                return RedirectToAction("Resultats");
+            }
+
+            return RedirectToAction("Resultats");
         }
     }
 }

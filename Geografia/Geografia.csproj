@@ -196,9 +196,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802211828152_cambios.cs" />
-    <Compile Include="Migrations\201802211828152_cambios.Designer.cs">
-      <DependentUpon>201802211828152_cambios.cs</DependentUpon>
+    <Compile Include="Migrations\201802221433268_Initial.cs" />
+    <Compile Include="Migrations\201802221433268_Initial.Designer.cs">
+      <DependentUpon>201802221433268_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -290,7 +290,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\ActivitatAlumnes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -306,8 +305,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201802211828152_cambios.resx">
-      <DependentUpon>201802211828152_cambios.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802221433268_Initial.resx">
+      <DependentUpon>201802221433268_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -20,7 +20,7 @@ namespace Geografia.Models
         //[ForeignKey("NickActivitat")]
         //virtual public Activitat Activitat { get; set; }
 
-        public DateTime Data { get; set; }
+        public DateTime Data { get; set; } = DateTime.Now;
 
         public float Nota { get; set; }
     }
