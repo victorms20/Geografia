@@ -11,7 +11,7 @@ namespace Geografia.Migrations
                 "dbo.ActivitatAlumnes",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        Id = c.Guid(nullable: false),
                         NickAlumne = c.String(),
                         NomActivitat = c.String(),
                         Data = c.DateTime(nullable: false),

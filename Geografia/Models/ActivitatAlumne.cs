@@ -10,7 +10,7 @@ namespace Geografia.Models
     public class ActivitatAlumne
     {
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         public string NickAlumne { get; set; }
         //[ForeignKey("NickAlumne")]

@@ -47,7 +47,7 @@ namespace Geografia.Controllers
         [HttpPost]
         public ActionResult CreateNick([Bind(Include = "Nota,NickAlumne,NomActivitat,Data")] ActivitatAlumne activitatAlumne)
         {
-            var activitat = activitatAlumne;
+            activitatAlumne.Id = Guid.NewGuid();
             if (ModelState.IsValid)
             {
                 dBContext.ActivitatsAlumne.Add(activitatAlumne);
