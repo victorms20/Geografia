@@ -1,6 +1,7 @@
 using Geografia.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Diagnostics;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,10 @@ namespace Geografia.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ApplicationDbContext dBContext = new ApplicationDbContext();
+
+        public HomeController() { }
+
         public ActionResult Index()
         {
             return View();
@@ -31,16 +36,25 @@ namespace Geografia.Controllers
 
         public ActionResult MapaCatalunya() => View();
 
-        public ActionResult Resultats() => View();
+        public ActionResult Resultats() => View(dBContext.ActivitatsAlumne);
 
-        public ActionResult Act1_ClickComarca() => View();
+        public ActionResult Act1_ClickComarca()
+        {
+            return View(new ActivitatAlumne());
+        }
 
         public ActionResult Activitat2() => View();
 
-        //[HttpPost]
-        //public ActionResult CreateNick(string nick)
-        //{
-            
-        //}
+        [HttpPost]
+        public ActionResult CreateNick([Bind(Include = "NickAlumne,NomActivitat,Nota,Data")] ActivitatAlumne activitatAlumne)
+        {
+            var alumne = activitatAlumne;
+            activitatAlumne.Id = Guid.NewGuid();
+                        
+            dBContext.ActivitatsAlumne.Add(activitatAlumne);
+            dBContext.SaveChanges();
+
+            return RedirectToAction("Resultats");
+        }
     }
 }

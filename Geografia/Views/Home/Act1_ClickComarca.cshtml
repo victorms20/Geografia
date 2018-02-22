@@ -3,9 +3,9 @@
 <head>
     <title>Hola</title>
     <link href="../Content/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="../Content/style.css" rel="stylesheet" media="screen">
-    <script src="../../Scripts/js/Act1_ClickComarca.js"></script>
+    <link href="../Content/style.css" rel="stylesheet" media="screen" />
     <script src="../../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../../Scripts/js/Act1_ClickComarca.js"></script>
 </head>
 
 <body>
@@ -13,16 +13,22 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div id="bodyModal" class="modal-body">
-                    <form action="@Url.Action("CreateNick","Home")" method="post">
-                        <div class="form-group">
-                            <h5 id="notaFinal"><span class="badge badge-secondary"></span></h5>
-                            <br />
-                            <label for="email">Inserta el teu nick:</label>
-                            <input type="text" name="nick" class="form-control" id="nick" placeholder="NickName">
-                        </div>
-                        <button id="enviarStats" type="submit" class="btn btn-primary">Enviar</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No enviar</button>
-                    </form> 
+                    @model Geografia.Models.ActivitatAlumne
+                    @using (Html.BeginForm("CreateNick", "Home", FormMethod.Post))
+                    {
+                        <form>
+                            <div class="form-group">
+                                <h5 id="notaFinal"><span class="badge badge-secondary"></span></h5>
+                                <br />
+                                <label for="email">Inserta el teu nick:</label>
+                                @Html.TextBoxFor(model => model.NickAlumne)
+                                @Html.TextBoxFor(model => model.Nota, htmlAttributes: new { id = "notaActivitat1", type = "hidden" })
+                                @Html.TextBoxFor(model => model.NomActivitat, htmlAttributes: new { @Value = "Activitat 1", type = "hidden" })
+                                <input type="submit" class="btn btn-primary" value="Enviar" />
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No enviar</button>
+                            </div>
+                        </form>
+                    }
                 </div>
             </div>
         </div>
@@ -34,7 +40,7 @@
             <div class="col-lg-8">
                 <div id="h3Comarca"> <h4>Clicka sobre la comarca: </h4> </div>
             </div>
-            
+
             <div class="col-lg-2"></div>
         </div>
     </div>
@@ -48,18 +54,17 @@
         <div class="col-lg-2">
             <div id="marcador_encerts"><h4>0/0</h4></div>
             <div id="barraProgress" class="progress position-relative">
-                
+
                 <div id="barraProgress1" class="progress-bar" role="progressbar"
                      aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                     style="width: 0%"> 
+                     style="width: 0%">
                     <span id="progressBarra">0%</span>
                 </div>
-                
+
             </div>
         </div>
-        
+
         <div class="col-lg-1"></div>
     </div>
-
 </body>
 </html>
