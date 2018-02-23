@@ -13,12 +13,8 @@ namespace Geografia.Models
         public Guid Id { get; set; }
 
         public string NickAlumne { get; set; }
-        //[ForeignKey("NickAlumne")]
-        //virtual public Alumne Alumne { get; set; }
 
         public string NomActivitat { get; set; }
-        //[ForeignKey("NickActivitat")]
-        //virtual public Activitat Activitat { get; set; }
 
         public DateTime Data { get; set; } = DateTime.Now;
 

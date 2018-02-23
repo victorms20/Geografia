@@ -48,11 +48,10 @@ namespace Geografia.Controllers
         [HttpPost]
         public ActionResult CreateNick([Bind(Include = "NickAlumne,NomActivitat,Nota,Data")] ActivitatAlumne activitatAlumne)
         {
-            var alumne = activitatAlumne;
-            activitatAlumne.Id = Guid.NewGuid();
-                        
+            activitatAlumne.Id = Guid.NewGuid();            
+            
             dBContext.ActivitatsAlumne.Add(activitatAlumne);
-            dBContext.SaveChanges();
+            dBContext.SaveChanges();            
 
             return RedirectToAction("Resultats");
         }
