@@ -6,17 +6,27 @@ var puntPerEncert = 2.4490243902439024390243902439024;
 var suma = 0;
 var pathComarcaCapital;
 
-function comprovarComarca(arrayComarca) {
+function comprovarComarca() {
+
+    var Capital = pathComarcaCapital[2].toLowerCase();
+    var entradaUsuari = document.getElementById("capitalUsuari").value.toLowerCase();
+    console.log(entradaUsuari + " " + Capital);
+
+    document.getElementById("capitalUsuari").value = "";
 
     //PINTA AMB COLOR VERD O VERMELL SEGONS SI ÉS CORRECTE O NO
-    if (comarcaActual == a) {
-        document.getElementById("map").contentDocument.getElementById(path).setAttribute('style', "fill: #12E700");
+    if (Capital == entradaUsuari) {
+        document.getElementById("map").contentDocument.getElementById(pathComarcaCapital[0]).setAttribute('style', "fill: #12E700");
         contadorPositiu++;
+        console.log("hola");
     }
     else {
-        document.getElementById("map").contentDocument.getElementById(path).setAttribute('style', "fill: #E71000");
+        document.getElementById("map").contentDocument.getElementById(pathComarcaCapital[0]).setAttribute('style', "fill: #E71000");
         contadorNegatiu++;
+        console.log("adeu");
     }
+
+    pathComarcaCapital = obtenirComarca();
 }
 
 function obtenirComarca() {
@@ -59,4 +69,15 @@ function ompleArray() {
     }
     pathComarcaCapital = obtenirComarca();
 }
-window.onload = ompleArray;
+
+function prova() {
+    document.getElementById("capitalUsuari").addEventListener('keypress', function (e) {
+        if (e.keyCode == 13) {
+            e.preventDefault();
+            comprovarComarca();
+        }
+    });
+}
+
+
+window.onload = ompleArray, prova;
