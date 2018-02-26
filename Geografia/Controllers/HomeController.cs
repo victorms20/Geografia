@@ -36,7 +36,7 @@ namespace Geografia.Controllers
 
         public ActionResult MapaCatalunya() => View();
 
-        public ActionResult Resultats() => View(dBContext.ActivitatsAlumne);
+        public ActionResult Resultats() => View(dBContext.ActivitatsAlumne.OrderByDescending(x => x.Nota));
 
         public ActionResult Act1_ClickComarca()
         {
@@ -48,8 +48,8 @@ namespace Geografia.Controllers
         [HttpPost]
         public ActionResult CreateNick([Bind(Include = "NickAlumne,NomActivitat,Nota,Data")] ActivitatAlumne activitatAlumne)
         {
-            activitatAlumne.Id = Guid.NewGuid();            
-            
+            activitatAlumne.Id = Guid.NewGuid();
+
             dBContext.ActivitatsAlumne.Add(activitatAlumne);
             dBContext.SaveChanges();            
 

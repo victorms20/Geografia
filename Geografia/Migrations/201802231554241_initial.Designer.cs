@@ -13,7 +13,7 @@ namespace Geografia.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201802231418476_initial"; }
+            get { return "201802231554241_initial"; }
         }
         
         string IMigrationMetadata.Source
