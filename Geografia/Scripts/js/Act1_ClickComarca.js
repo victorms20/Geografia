@@ -51,10 +51,12 @@ function comprovarComarca(a, path) {
     if (comarcaActual == a) {
         document.getElementById("map").contentDocument.getElementById(path).setAttribute('style', "fill: #12E700");
         contadorPositiu++;
+        $('#informacioResultat').html('<div class="alert alert-success"> <b> Correcte </b> </div >');
     }
     else {
         document.getElementById("map").contentDocument.getElementById(path).setAttribute('style', "fill: #E71000");
         contadorNegatiu++;
+        $('#informacioResultat').html('<div class="alert alert-danger"> <b> Incorrecte </b> </div >');
     }
 }
 

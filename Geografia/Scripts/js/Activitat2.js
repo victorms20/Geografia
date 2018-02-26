@@ -18,13 +18,18 @@ function comprovarComarca() {
     if (Capital == entradaUsuari) {
         document.getElementById("map").contentDocument.getElementById(pathComarcaCapital[0]).setAttribute('style', "fill: #12E700");
         contadorPositiu++;
-        console.log("hola");
+        $('#informacioResultat').html('<div class="alert alert-success"> <b> Correcte </b> </div >');
     }
     else {
         document.getElementById("map").contentDocument.getElementById(pathComarcaCapital[0]).setAttribute('style', "fill: #E71000");
         contadorNegatiu++;
-        console.log("adeu");
+        $('#informacioResultat').html('<div class="alert alert-danger">  Incorrecte, la resposta correcta era: <b>' + pathComarcaCapital[2] + '</b> </div >');
+
     }
+    document.getElementById("marcador_encerts").innerHTML = "<h4> " + contadorPositiu + "/" + (contadorNegatiu + contadorPositiu) + " </h4 > ";
+    suma = suma + puntPerEncert;
+    document.getElementById("barraProgress1").setAttribute('style', "width: " + suma + "%")
+    document.getElementById("progressBarra").innerHTML = suma.toFixed(0) + "%"
 
     pathComarcaCapital = obtenirComarca();
 }
@@ -51,8 +56,8 @@ function obtenirComarca() {
     else {
         var notaFinal = (contadorPositiu * 10) / 41;
         notaFinal = notaFinal.toFixed(2);
-        //$('#notaFinal').html("<b>Has encertat " + contadorPositiu + ' de 41, la teva nota és: <span class="badge badge-secondary" >' + notaFinal + '</span ></b>');
-        //$('#modalFinal').modal('show');
+        $('#notaFinal').html("<b>Has encertat " + contadorPositiu + ' de 41, la teva nota és: <span class="badge badge-secondary" >' + notaFinal + '</span ></b>');
+        $('#modalFinal').modal('show');
         return;
     }
 }
@@ -70,14 +75,11 @@ function ompleArray() {
     pathComarcaCapital = obtenirComarca();
 }
 
-function prova() {
-    document.getElementById("capitalUsuari").addEventListener('keypress', function (e) {
-        if (e.keyCode == 13) {
-            e.preventDefault();
-            comprovarComarca();
-        }
-    });
-}
+$(document).keypress(function (e) {
+    if (e.which == 13) {
+        comprovarComarca();
+    }
+});
 
 
-window.onload = ompleArray, prova;
+window.onload = ompleArray;

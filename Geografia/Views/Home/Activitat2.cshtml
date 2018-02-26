@@ -4,8 +4,9 @@
     <title>Hola</title>
     <link href="../Content/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../Content/style.css" rel="stylesheet" media="screen">
-    <script src="../../Scripts/js/Activitat2.js"></script>
     <script src="../../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../../Scripts/js/Activitat2.js"></script>
+    
 </head>
 
 <body>
@@ -45,7 +46,7 @@
             <object id="map" data="../../svg/mapa.svg" type="image/svg+xml"></object>
         </div>
 
-        <div class="col-lg-2">
+        <div class="col-lg-3">
             <div id="marcador_encerts"><h4>0/0</h4></div>
             <div id="barraProgress" class="progress position-relative">
 
@@ -57,13 +58,15 @@
             </div>
             <br />
             <br />
-            <form action="" autocomplete="off">
+            <div id="enviarStats" autocomplete="off">
                 <div class="form-group">
                     <label id="escriuCapital" for="capital">Inserta la capital:</label>
-                    <input id="capitalUsuari" type="text" class="form-control" placeholder="Capital">
+                    <input id="capitalUsuari" autocomplete="off" type="text" class="form-control" placeholder="Capital" autofocus>
                 </div>
-                <button id="enviarStats" type="button" class="btn btn-primary" onclick="comprovarComarca()" >Enviar</button>
-            </form>
+                <button type="button" class="btn btn-primary" onclick="comprovarComarca()" >Comprovar</button>
+            </div>
+            <br />
+            <div id="informacioResultat"></div>
 
         </div>
 

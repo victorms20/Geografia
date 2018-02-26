@@ -105,6 +105,8 @@ li:hover {
 background-color: dimgrey;
 border: 2px solid #045A7F;
 margin-top: 15%;
+width:auto;
+text-align:center;
 }
 
 #barraProgress {
@@ -361,3 +363,15 @@ margin-top:10px;
     color: white;
 }
 
+.alert-success {
+    text-align: center;
+    background-color:lightgreen;
+    border: 3px solid black;
+}
+
+.alert-danger {
+    text-align: center;
+    background-color: indianred;
+    border: 3px solid black;
+    color: red;
+}
