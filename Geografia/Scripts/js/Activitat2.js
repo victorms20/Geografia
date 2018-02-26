@@ -57,6 +57,8 @@ function obtenirComarca() {
         var notaFinal = (contadorPositiu * 10) / 41;
         notaFinal = notaFinal.toFixed(2);
         $('#notaFinal').html("<b>Has encertat " + contadorPositiu + ' de 41, la teva nota és: <span class="badge badge-secondary" >' + notaFinal + '</span ></b>');
+        var punto = notaFinal.replace(".", ",");
+        $("#notaActivitat1").val(punto);
         $('#modalFinal').modal('show');
         return;
     }
