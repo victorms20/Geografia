@@ -17,18 +17,17 @@
                     @model Geografia.Models.ActivitatAlumne
                     @using (Html.BeginForm("CreateNick", "Home", FormMethod.Post))
                     {
-                        <form action="/action_page.php">
+                        <form>
                             <div class="form-group">
                                 <h5 id="notaFinal"><span class="badge badge-secondary"></span></h5>
                                 <br />
                                 <label for="email">Inserta el teu nick:</label>
                                 @Html.TextBoxFor(model => model.NickAlumne, new { @maxlength = "19" })
                                 @Html.TextBoxFor(model => model.Nota, htmlAttributes: new { id = "notaActivitat1", type = "hidden" })
-                                @Html.TextBoxFor(model => model.NomActivitat, htmlAttributes: new { @Value = "Activitat 2", type = "hidden" })
-                                <input type="email" class="form-control" id="email" placeholder="NickName">
+                                @Html.TextBoxFor(model => model.NomActivitat, htmlAttributes: new { @Value = "Activitat 1", type = "hidden" })
+                                <input type="submit" class="btn btn-primary" value="Enviar" />
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No enviar</button>
                             </div>
-                            <button id="enviarStats" type="button" class="btn btn-primary">Enviar</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No enviar</button>
                         </form>
                     }
                 </div>
