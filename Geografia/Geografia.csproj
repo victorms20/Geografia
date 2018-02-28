@@ -234,6 +234,7 @@
     <Content Include="Scripts\backup_js_principal\javascript.js" />
     <Content Include="Scripts\js\Act1_ClickComarca.js" />
     <Content Include="Scripts\js\Activitat2.js" />
+    <Content Include="Scripts\js\Activitat3.js" />
     <Content Include="Scripts\js\javascript.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -292,6 +293,7 @@
     <Content Include="Views\Home\Resultats.cshtml" />
     <Content Include="Views\Home\Qualificacions.cshtml" />
     <Content Include="Views\Home\Activitat2.cshtml" />
+    <Content Include="Views\Home\Activitat3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

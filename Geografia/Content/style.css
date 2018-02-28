@@ -375,3 +375,13 @@ margin-top:10px;
     border: 3px solid black;
     color: red;
 }
+
+.escollirCapital {
+    background-color: #FF750D;
+    color: black;
+    border: 2px solid black;
+}
+
+.escollirCapital:hover {
+    background-color: #FF8F0D;
+}
