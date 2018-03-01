@@ -337,7 +337,6 @@ margin-top:10px;
 
 
 .mapaCatalunya {
-    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
     margin: 5px;
 }
@@ -409,4 +408,10 @@ margin-top:10px;
 
 #divMapa {
     height: 450px;
+}
+
+.panelrespuesta {
+    background-color: #FF750D;
+    margin-top: 5%;
+    border-radius: 10px;
 }
