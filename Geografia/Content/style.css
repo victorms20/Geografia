@@ -405,3 +405,8 @@ margin-top:10px;
     background-color: #363A7F !important;
     border: solid 1px black;
 }
+}
+
+#divMapa {
+    height: 450px;
+}
