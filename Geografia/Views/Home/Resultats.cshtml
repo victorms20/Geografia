@@ -5,9 +5,9 @@
     <script src="../../Scripts/js/TakeDivs.js"></script>
 </head>
 <body>
-
+    @model IEnumerable<Geografia.Models.ActivitatAlumne>
     <div class="jumbotron con-resultados">
-        @model IEnumerable<Geografia.Models.ActivitatAlumne>
+
         <div class="col-sm-3 top">
             <div class="intuitivo">
                 <div>TOP 3 Activitats</div>
@@ -74,31 +74,13 @@
             </div>
         </div>
         <div class="col-sm-1">
-            <div>
-                @*@using (Ajax.BeginForm("action", "controller", new AjaxOptions
-                {
-                    UpdateTargetId = "resultats",
-                    HttpMethod = "GET",
-                }))
-                {
-                    @Html.TextBox
-                    <input type="submit" value="Search"/>
-                }*@
-                <div id="resultats"></div>
-            </div>
-           
+
         </div>
 
         <div class="col-sm-8 resultados">
-            <form class="form-inline from-search">
-                <div class="form-group mx-sm-3 mb-2">
-                    <label for="inputPassword2" class="sr-only"></label>
-                    <input type="text" class="form-control" id="nick-search" placeholder="Buscar NickName">
-                </div>
-                <button type="submit" class="btn btn-primary mb-2 boton-search">Buscar</button>
-            </form>
-
-
+            <div class="intuitivo">
+                <div>TOP 10 Activitats</div>
+            </div>
             <div class="tituloresul">
                 <div class="minititulo">Nick</div>
                 <div class="minititulo">Activitat</div>
@@ -107,14 +89,14 @@
             </div>
             <div class="inforesul" id="easyPaginate">
                 @foreach (var activitat in Model.Take(13))
-                {
-                    <div class="infogrande">
-                        <div class="miniinfo nickname">@activitat.NickAlumne</div>
-                        <div class="miniinfo nomactivitat">@activitat.NomActivitat</div>
-                        <div class="miniinfo notaactivitat">@activitat.Nota</div>
-                        <div class="miniinfo dataactivitat">@activitat.Data</div>
-                    </div>
-                    }
+        {
+            <div class="infogrande">
+                <div class="miniinfo nickname">@activitat.NickAlumne</div>
+                <div class="miniinfo nomactivitat">@activitat.NomActivitat</div>
+                <div class="miniinfo notaactivitat">@activitat.Nota</div>
+                <div class="miniinfo dataactivitat">@activitat.Data</div>
+            </div>
+}
             </div>
         </div>
     </div>

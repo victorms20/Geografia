@@ -50,8 +50,6 @@ namespace Geografia.Controllers
         [HttpPost]
         public ActionResult CreateNick([Bind(Include = "NickAlumne,NomActivitat,Nota,Data")] ActivitatAlumne activitatAlumne)
         {
-            var search = dBContext.ActivitatsAlumne.Find();
-
             activitatAlumne.Id = Guid.NewGuid();
 
             dBContext.ActivitatsAlumne.Add(activitatAlumne);

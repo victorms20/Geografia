@@ -78,4 +78,7 @@
         $('.dataactivitat').eq(0).remove();
     }
 
+   
+
 });
+
