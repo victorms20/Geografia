@@ -30,7 +30,8 @@
             </div>
         </div>
     </nav>
-    <div class="navbar navbar-inverse navbar-fixed-bottom menuSup">
+    
+    <div class="navbar navbar-inverse navbar-fixed-bottom menuSup footerindex">
         <div class="container">
             <p class="navbar-text pull-left">
                 © 2018 - AprenGeografia.cat
@@ -41,7 +42,7 @@
 
 
     </div>
-
+    <div class="col-lg-12"></div>
     <div class="container body-content">
         @RenderBody()
         @*<hr />*@
@@ -49,5 +50,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <div class="separador"></div>
 </body>
 </html>

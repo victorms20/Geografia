@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <script src="../../Scripts/jquery-1.10.2.min.js"></script>
     <script src="../../Scripts/js/TakeDivs.js"></script>
 </head>
 <body>
@@ -14,84 +15,106 @@
             <div class="tops">
                 <div class="imagen">
                     <img src="~/Content/Images/primero.png" class="imagenpos" />
-                    <div id="activitatUser1" class="actividadinfo"></div>
+                    <div id="activitatUser1" class="actividadinfo activitat1"></div>
                 </div>
                 <div class="infoganador">
                     <div class="nombreuser cuadradosinfo">
                         <div class="clasedetallada styletitulo">Nick:</div>
-                        <div id="nomUser1" class="clasedetallada styleinfo"></div>
+                        <div id="nomUser1" class="clasedetallada styleinfo nick1"></div>
                     </div>
                     <div class="nota cuadradosinfo">
                         <div class="clasedetallada styletitulo">Nota:</div>
-                        <div id="notaUser1"class="clasedetallada styleinfo"></div>
+                        <div id="notaUser1" class="clasedetallada styleinfo nota1"></div>
                     </div>
                     <div class="fecha cuadradosinfo">
                         <div class="clasedetallada styletitulo">Data:</div>
-                        <div id="dataUser1" class="clasedetallada styleinfo">02/02/2000</div>
+                        <div id="dataUser1" class="clasedetallada styleinfo data1"></div>
                     </div>
                 </div>
             </div>
             <div class="tops">
                 <div class="imagen">
                     <img src="~/Content/Images/segundo.png" class="imagenpos" />
-                    <div id="activitatUser2" class="actividadinfo">A1</div>
+                    <div id="activitatUser2" class="actividadinfo activitat2"></div>
                 </div>
                 <div class="infoganador">
                     <div class="nombreuser cuadradosinfo">
                         <div class="clasedetallada styletitulo">Nick:</div>
-                        <div id="nomUser2" class="clasedetallada styleinfo">Juan</div>
+                        <div id="nomUser2" class="clasedetallada styleinfo nick2"></div>
                     </div>
                     <div class="nota cuadradosinfo">
                         <div class="clasedetallada styletitulo">Nota:</div>
-                        <div id="notaUser2"class="clasedetallada styleinfo">8.24</div>
+                        <div id="notaUser2" class="clasedetallada styleinfo nota2"></div>
                     </div>
                     <div class="fecha cuadradosinfo">
                         <div class="clasedetallada styletitulo">Data:</div>
-                        <div id="dataUser2" class="clasedetallada styleinfo">02/02/2000</div>
+                        <div id="dataUser2" class="clasedetallada styleinfo data2"></div>
                     </div>
                 </div>
             </div>
             <div class="tops">
                 <div class="imagen">
                     <img src="~/Content/Images/tercero.png" class="imagenpos" />
-                    <div id="activitatUser3" class="actividadinfo">A2</div>
+                    <div id="activitatUser3" class="actividadinfo activitat3"></div>
                 </div>
                 <div class="infoganador">
                     <div class="nombreuser cuadradosinfo">
                         <div class="clasedetallada styletitulo">Nick:</div>
-                        <div class="clasedetallada styleinfo">Maria</div>
+                        <div class="clasedetallada styleinfo nick3"></div>
                     </div>
                     <div class="nota cuadradosinfo">
                         <div class="clasedetallada styletitulo">Nota:</div>
-                        <div class="clasedetallada styleinfo">8.23</div>
+                        <div class="clasedetallada styleinfo nota3"></div>
                     </div>
                     <div class="fecha cuadradosinfo">
                         <div class="clasedetallada styletitulo">Data:</div>
-                        <div class="clasedetallada styleinfo">02/02/2000</div>
+                        <div class="clasedetallada styleinfo data3"></div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-sm-1">
-
+            <div>
+                @*@using (Ajax.BeginForm("action", "controller", new AjaxOptions
+                {
+                    UpdateTargetId = "resultats",
+                    HttpMethod = "GET",
+                }))
+                {
+                    @Html.TextBox
+                    <input type="submit" value="Search"/>
+                }*@
+                <div id="resultats"></div>
+            </div>
+           
         </div>
+
         <div class="col-sm-8 resultados">
+            <form class="form-inline from-search">
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="inputPassword2" class="sr-only"></label>
+                    <input type="text" class="form-control" id="nick-search" placeholder="Buscar NickName">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2 boton-search">Buscar</button>
+            </form>
+
+
             <div class="tituloresul">
                 <div class="minititulo">Nick</div>
                 <div class="minititulo">Activitat</div>
                 <div class="minititulo">Nota</div>
                 <div class="minititulo">Data</div>
             </div>
-            <div class="inforesul">
-                @foreach (var activitat in Model)
+            <div class="inforesul" id="easyPaginate">
+                @foreach (var activitat in Model.Take(13))
                 {
                     <div class="infogrande">
-                        <div class="miniinfo">@activitat.NickAlumne</div>
-                        <div class="miniinfo">@activitat.NomActivitat</div>
-                        <div class="miniinfo">@activitat.Nota</div>
-                        <div class="miniinfo">@activitat.Data</div>
+                        <div class="miniinfo nickname">@activitat.NickAlumne</div>
+                        <div class="miniinfo nomactivitat">@activitat.NomActivitat</div>
+                        <div class="miniinfo notaactivitat">@activitat.Nota</div>
+                        <div class="miniinfo dataactivitat">@activitat.Data</div>
                     </div>
-                }
+                    }
             </div>
         </div>
     </div>

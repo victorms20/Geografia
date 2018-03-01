@@ -22,7 +22,7 @@
                                 <h5 id="notaFinal"><span class="badge badge-secondary"></span></h5>
                                 <br />
                                 <label for="email">Inserta el teu nick:</label>
-                                @Html.TextBoxFor(model => model.NickAlumne, new { @maxlength = "19" })
+                                @Html.TextBoxFor(model => model.NickAlumne, new { @maxlength = "19" , required = "required" })
                                 @Html.TextBoxFor(model => model.Nota, htmlAttributes: new { id = "notaActivitat1", type = "hidden" })
                                 @Html.TextBoxFor(model => model.NomActivitat, htmlAttributes: new { @Value = "Activitat 2", type = "hidden" })
                                 <input type="submit" class="btn btn-primary" value="Enviar" />
