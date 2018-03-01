@@ -45,6 +45,8 @@ namespace Geografia.Controllers
 
         public ActionResult Activitat2() => View();
 
+        public ActionResult Activitat3() => View();
+
         [HttpPost]
         public ActionResult CreateNick([Bind(Include = "NickAlumne,NomActivitat,Nota,Data")] ActivitatAlumne activitatAlumne)
         {
