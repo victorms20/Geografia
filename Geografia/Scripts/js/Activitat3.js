@@ -11,14 +11,12 @@ var capitalFalsa1;
 var capitalFalsa2;
 var arrayRandom3 = [];
 var arrayBo = [];
+var cont = 0;
 
-function comprovarComarca() {
+function comprovarComarca(elementClickat) {
 
     var Capital = pathComarcaCapital[2].toLowerCase();
-    var entradaUsuari = document.getElementById("capitalUsuari").value.toLowerCase();
-    console.log(entradaUsuari + " " + Capital);
-
-    document.getElementById("capitalUsuari").value = "";
+    var entradaUsuari = elementClickat.toLowerCase();
 
     //PINTA AMB COLOR VERD O VERMELL SEGONS SI ÉS CORRECTE O NO
     if (Capital == entradaUsuari) {
@@ -42,7 +40,7 @@ function comprovarComarca() {
 
 function obtenirComarca() {
     var llargadaArray = arrayComarques.length;
-    //Omplim l'array random 42 amb les comacques i capitals.
+    //Omplim l'array random 42 amb les comarques i capitals.
     
     //Creem un random
     if (llargadaArray > 0) {
@@ -64,8 +62,17 @@ function obtenirComarca() {
             arrayBo = crearArrayRandom(splitted[2], capitalFalsa1, capitalFalsa2);
 
             $("#button1").html(arrayBo[0]);
+            
             $("#button2").html(arrayBo[1]);
+            
             $("#button3").html(arrayBo[2]);
+
+
+            if (cont == 0) {
+                addListeners();
+                cont = 1;
+            }
+
 
             var capital = splitted[2];
 
@@ -122,7 +129,7 @@ function crearArrayRandom(capital1, capital2, capital3) {
     var llargadaArray3 = arrayCapitals.length;
     var arrayRandomD = [];
 
-    for (var i = llargadaArray3-1; i >= 0; i--) {
+    for (var i = llargadaArray3; i > 0; i--) {
 
         var random = Math.floor(Math.random() * i);
 
@@ -141,6 +148,21 @@ function ompleArrayRandom() {
     for (var i = 0; i < llargadaArray2; i++) {
         arrayRandom41.push(arrayComarques[i]);
     }
+    
     pathComarcaCapital = obtenirComarca();
 }
+addListeners;
+function addListeners() {
 
+    document.getElementById("button1").addEventListener('click', function (e) {
+        comprovarComarca($("#button1").text());
+    });
+
+    document.getElementById("button2").addEventListener('click', function (e) {
+        comprovarComarca($("#button2").text());
+    });
+
+    document.getElementById("button3").addEventListener('click', function (e) {
+        comprovarComarca($("#button3").text());
+    });
+}

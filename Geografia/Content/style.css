@@ -384,12 +384,13 @@ margin-top:10px;
     background-color: #FF750D;
     color: black;
     border: 2px solid black;
+    width:30%;
 }
 
 .escollirCapital:hover {
     background-color: #FF8F0D;
 }
-}
+
 
 .divproces {
     background-color: #FF750D;
@@ -405,7 +406,7 @@ margin-top:10px;
     background-color: #363A7F !important;
     border: solid 1px black;
 }
-}
+
 
 #divMapa {
     height: 450px;
