@@ -51,6 +51,7 @@ namespace Geografia.Controllers
         [HttpPost]
         public ActionResult CreateNick([Bind(Include = "NickAlumne,NomActivitat,Nota,Data")] ActivitatAlumne activitatAlumne)
         {
+
             activitatAlumne.Id = Guid.NewGuid();
 
             dBContext.ActivitatsAlumne.Add(activitatAlumne);
@@ -58,5 +59,6 @@ namespace Geografia.Controllers
 
             return RedirectToAction("Resultats");
         }
+
     }
 }

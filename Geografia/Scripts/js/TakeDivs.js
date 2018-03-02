@@ -89,6 +89,6 @@ $(document).ready(function () {
     for (var i = 0; i < posicion.length; i++) {
         posicion[i].innerHTML = i + 4;
     }
-
 });
+
 
