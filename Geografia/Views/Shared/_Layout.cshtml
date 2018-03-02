@@ -3,21 +3,15 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>Index</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link rel="stylesheet" href="~/Content/style.css">
 </head>
 <body>
-
     <nav class="navbar navbar-inverse navbar-fixed-top menuSup">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 @Html.ActionLink("LOGO", "Index", "Home", new { @class = "logoNavbar" })
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
@@ -30,22 +24,16 @@
             </div>
         </div>
     </nav>
-    
     <div class="navbar navbar-inverse navbar-fixed-bottom menuSup footerindex">
         <div class="container">
             <p class="navbar-text pull-left">
                 © 2018 - AprenGeografia.cat
-                
             </p>
-
         </div>
-
-
     </div>
     <div class="col-lg-12"></div>
     <div class="container body-content">
         @RenderBody()
-        @*<hr />*@
     </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

@@ -1,8 +1,11 @@
-﻿$(document).ready(function () {
+﻿//Creació div's per la pàgina Resultats
+
+$(document).ready(function () {
     var diminutivo_act1 = "";
     var diminutivo_act2 = "";
     var diminutivo_act3 = "";
 
+    //Agafar els 3 primers div's per posar-los en el TOP 3
     var nickname_1 = $(".nickname").eq(0).text();
     var activitat_1 = $(".nomactivitat").eq(0).text();
     var nota_1 = $(".notaactivitat").eq(0).text();
@@ -19,6 +22,7 @@
     var data_3 = $('.dataactivitat').eq(2).text();
 
 
+        //Mirar quina Activitat es i posar diminutiu
         if ($(".nomactivitat").eq(0).text() == "Activitat 1") {
             diminutivo_act1 = "A1";
         } else if ($(".nomactivitat").eq(0).text() == "Activitat 2") {
@@ -71,14 +75,20 @@
 
     $(".activitat3").text(diminutivo_act2);
 
+    //Bucle posicions
     for (var i = 0; i <= 2; i++) {
+        $(".posicion").eq(0).remove();
         $(".nickname").eq(0).remove();
         $(".nomactivitat").eq(0).remove();
         $(".notaactivitat").eq(0).remove();
         $('.dataactivitat').eq(0).remove();
     }
 
-   
+    var posicion = $(".posicion");
+
+    for (var i = 0; i < posicion.length; i++) {
+        posicion[i].innerHTML = i + 4;
+    }
 
 });
 

@@ -415,3 +415,8 @@ margin-top:10px;
     margin-top: 5%;
     border-radius: 10px;
 }
+
+.posicion, .posicionnick {
+    width: 25%;
+    font-weight: bold;
+}

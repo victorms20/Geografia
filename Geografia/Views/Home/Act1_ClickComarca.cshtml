@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Hola</title>
+    <title>Activitat 1</title>
     <link href="../Content/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../Content/style.css" rel="stylesheet" media="screen" />
     <script src="../../Scripts/jquery-1.10.2.min.js"></script>
@@ -13,6 +13,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div id="bodyModal" class="modal-body">
+                    @*Agafem la informació de l'activita, la nota i el nickname, a més a més, d'afegir-lo a la base de dades*@ 
                     @model Geografia.Models.ActivitatAlumne
                     @using (Html.BeginForm("CreateNick", "Home", FormMethod.Post))
                     {
