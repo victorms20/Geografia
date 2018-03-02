@@ -417,6 +417,11 @@ margin-top:10px;
     border-radius: 10px;
 }
 
+.posicion, .posicionnick {
+    width: 25%;
+    font-weight: bold;
+}
+
 .buttonComprovar {
     width:100% !important;
 }

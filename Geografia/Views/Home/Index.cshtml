@@ -1,17 +1,9 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
-
-
 <div class="container">
-
     <img src="~/Content/Images/apcatGranBlanc.png" class="logoIndex img-responsive" />
-
-
-
     <div>
-
         <div id="accordion">
             <div class="list-group-item llistaIndex">
                 <div id="headingOne">
@@ -19,7 +11,6 @@
                         <h2>Activitat 1: Clicar Comarca</h2>
                     </button>
                 </div>
-
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="cosActivitat">
                         <div class="textActivitat col-sm-8">
@@ -28,12 +19,10 @@
                         <div class="imageActivitat col-sm-4 ">
                             <img src="~/Content/Images/act1.png" class="imageActivitatDins img-responsive" />
                         </div>
-
                     </div>
                     <div class="topActivitats">
                         @Html.ActionLink("Començar l'activitat!", "Act1_ClickComarca", "Home", new { @class = "btn btn-default botoActivitat" })
                         @Html.ActionLink("Resultats", "Resultats", "Home", new { @class = "btn btn-default botoActivitat" })
-
                     </div>
                 </div>
             </div>
@@ -51,7 +40,6 @@
                         <div class="imageActivitat col-sm-4 ">
                             <img src="~/Content/Images/ac2.png" class="imageActivitatDins img-responsive" />
                         </div>
-
                     </div>
                     <div class="topActivitats">
                         @Html.ActionLink("Començar l'activitat!", "Activitat2", "Home", new { @class = "btn btn-default botoActivitat" })
@@ -62,7 +50,7 @@
             <div class="list-group-item llistaIndex">
                 <div id="headingThree">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <h2>Activitat 3: Adivinar Capital</h2>
+                        <h2>Activitat 3: Endevinar Capital</h2>
                     </button>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
@@ -73,18 +61,17 @@
                         <div class="imageActivitat col-sm-4 ">
                             <img src="~/Content/Images/ac3.png" class="imageActivitatDins img-responsive" />
                         </div>
-
-                </div>
-                <div class="topActivitats">
-                    @Html.ActionLink("Començar l'activitat!", "Activitat3", "Home", new { @class = "btn btn-default botoActivitat" })
-                    @Html.ActionLink("Resultats", "Resultats", "Home", new { @class = "btn btn-default botoActivitat" })
+                    </div>
+                    <div class="topActivitats">
+                        @Html.ActionLink("Començar l'activitat!", "Activitat3", "Home", new { @class = "btn btn-default botoActivitat" })
+                        @Html.ActionLink("Resultats", "Resultats", "Home", new { @class = "btn btn-default botoActivitat" })
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
-    </div>
 </div>
+
 

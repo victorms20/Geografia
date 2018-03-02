@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <title>Resultats</title>
     <script src="../../Scripts/jquery-1.10.2.min.js"></script>
     <script src="../../Scripts/js/TakeDivs.js"></script>
 </head>
@@ -82,15 +83,18 @@
                 <div>TOP 10 Activitats</div>
             </div>
             <div class="tituloresul">
+                <div class="minititulo posicionnick">P</div>
                 <div class="minititulo">Nick</div>
                 <div class="minititulo">Activitat</div>
                 <div class="minititulo">Nota</div>
                 <div class="minititulo">Data</div>
             </div>
             <div class="inforesul" id="easyPaginate">
+                @*Inserim els 13 primeres notes amb la seva informació*@
                 @foreach (var activitat in Model.Take(13))
         {
             <div class="infogrande">
+                <div class="miniinfo posicion"></div>
                 <div class="miniinfo nickname">@activitat.NickAlumne</div>
                 <div class="miniinfo nomactivitat">@activitat.NomActivitat</div>
                 <div class="miniinfo notaactivitat">@activitat.Nota</div>

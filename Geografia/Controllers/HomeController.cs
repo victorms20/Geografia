@@ -47,9 +47,11 @@ namespace Geografia.Controllers
 
         public ActionResult Activitat3() => View();
 
+        //POST per inserir la informació de la persona a l'activitat i redirigir a Resultats
         [HttpPost]
         public ActionResult CreateNick([Bind(Include = "NickAlumne,NomActivitat,Nota,Data")] ActivitatAlumne activitatAlumne)
         {
+
             activitatAlumne.Id = Guid.NewGuid();
 
             dBContext.ActivitatsAlumne.Add(activitatAlumne);
@@ -57,5 +59,6 @@ namespace Geografia.Controllers
 
             return RedirectToAction("Resultats");
         }
+
     }
 }
