@@ -105,7 +105,7 @@ li:hover {
 
 #marcador_encerts {
     background-color: #b53d00;
-    border: 2px solid white;
+    border: 3px solid black;
     border-radius: 10px;
     margin-top: 8%;
     width: auto;
@@ -362,7 +362,8 @@ margin-top:10px;
 }
 
 #escriuCapital {
-    color: white;
+    color: black;
+    text-align:center !important;
 }
 
 .alert-success {
@@ -414,4 +415,8 @@ margin-top:10px;
     background-color: #FF750D;
     margin-top: 5%;
     border-radius: 10px;
+}
+
+.buttonComprovar {
+    width:100% !important;
 }

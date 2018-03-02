@@ -6,6 +6,7 @@ var puntPerEncert = 2.4490243902439024390243902439024;
 var suma = 0;
 var pathComarcaCapital;
 
+//Funcio que comprova l'entrada de kl'usuari i ho compara amb la resposta correcte per saber si esta bé o no.
 function comprovarComarca() {
 
     var Capital = pathComarcaCapital[2].toLowerCase();
@@ -26,13 +27,16 @@ function comprovarComarca() {
         $('#informacioResultat').html('<div class="alert alert-danger">  Incorrecte, la resposta correcta era: <b>' + pathComarcaCapital[2] + '</b> </div >');
 
     }
+    //INCREMENTA EL CONTADOR D'INTENTS I LA BARRA DE PROGRESS
     document.getElementById("marcador_encerts").innerHTML = "<h4> " + contadorPositiu + "/" + (contadorNegatiu + contadorPositiu) + " </h4 > ";
     suma = suma + puntPerEncert;
     document.getElementById("barraProgress1").setAttribute('style', "width: " + suma + "%")
     document.getElementById("progressBarra").innerHTML = suma.toFixed(0) + "%"
 
+    //UN COP COMPROVAT SI ES CORRECTA O INCORRECTE TORNA A CRIDAR A LA FUNCIO D'OBTENIR COMARCA
     pathComarcaCapital = obtenirComarca();
 }
+
 
 function obtenirComarca() {
     var llargadaArray = arrayComarques.length;
@@ -52,7 +56,7 @@ function obtenirComarca() {
 
         return splitted;
     }
-
+    //SI JA S'HAN MOSTRAT TOTES LES COMARQUES, ENSENYEM LA NOTA A L'USUARI.
     else {
         var notaFinal = (contadorPositiu * 10) / 41;
         notaFinal = notaFinal.toFixed(2);
@@ -63,7 +67,7 @@ function obtenirComarca() {
         return;
     }
 }
-
+//OMPLE L'ARRAY AL PRINCIPI AMB TOTES LES COMARQUES I CAPITALS I EL ID
 function ompleArray() {
     for (var i = 1; i < 42; i++) {
         var IString = i.toString();
@@ -76,7 +80,7 @@ function ompleArray() {
     }
     pathComarcaCapital = obtenirComarca();
 }
-
+//SI PREMEM LA TECLA ENTER 
 $(document).keypress(function (e) {
     if (e.which == 13) {
         comprovarComarca();
