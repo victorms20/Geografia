@@ -21,7 +21,7 @@ namespace Geografia.Models
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext()
-            : base("DefaultConnection")
+            : base("DinaHosting")
         {
         }
 

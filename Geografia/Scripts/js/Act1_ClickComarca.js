@@ -48,7 +48,7 @@ function comprovarComarca(a, path) {
     element.parentNode.replaceChild(new_element, element);
 
     //PINTA AMB COLOR VERD O VERMELL SEGONS SI ÉS CORRECTE O NO
-    if (comarcaActual == a) {
+    if (comarcaActual === a) {
         document.getElementById("map").contentDocument.getElementById(path).setAttribute('style', "fill: #12E700");
         contadorPositiu++;
         $('#informacioResultat').html('<div class="alert alert-success"> <b> Correcte </b> </div >');

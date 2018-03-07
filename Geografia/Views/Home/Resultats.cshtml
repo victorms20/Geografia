@@ -91,16 +91,20 @@
             </div>
             <div class="inforesul" id="easyPaginate">
                 @*Inserim els 13 primeres notes amb la seva informació*@
-                @foreach (var activitat in Model.Take(13))
-        {
-            <div class="infogrande">
-                <div class="miniinfo posicion"></div>
-                <div class="miniinfo nickname">@activitat.NickAlumne</div>
-                <div class="miniinfo nomactivitat">@activitat.NomActivitat</div>
-                <div class="miniinfo notaactivitat">@activitat.Nota</div>
-                <div class="miniinfo dataactivitat">@activitat.Data</div>
-            </div>
-}
+                <table class="table paginated">
+                    <tbody>
+                        @foreach (var activitat in Model.Take(13))
+                        {
+                            <tr class="infogrande">
+                                <td class="posicion"></td>
+                                <td class="miniinfo nickname">@activitat.NickAlumne</td>
+                                <td class="miniinfo nomactivitat">@activitat.NomActivitat</td>
+                                <td class="miniinfo notaactivitat">@activitat.Nota</td>
+                                <td class="miniinfo dataactivitat">@activitat.Data</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
