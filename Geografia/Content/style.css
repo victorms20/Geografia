@@ -417,11 +417,34 @@ margin-top:10px;
     border-radius: 10px;
 }
 
-.posicion, .posicionnick {
+.posicion {
     width: 25%;
     font-weight: bold;
+    text-align: center;
+}
+
+.posicionnick {
+    width: 25%;
+    font-weight: bold;
+    text-align: center;
 }
 
 .buttonComprovar {
     width:100% !important;
+}
+
+.containerlogo {
+   text-align:center;
+}
+
+.imagelogo1 {
+    height: 40px;
+    width:70px;
+    margin: 5px;
+}
+
+.imagelogo2 {
+    height: 40px;
+    width: 45px;
+    margin: 5px;
 }

@@ -12,6 +12,11 @@
     <nav class="navbar navbar-inverse navbar-fixed-top menuSup">
         <div class="container-fluid">
             <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 @Html.ActionLink("LOGO", "Index", "Home", new { @class = "logoNavbar" })
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
@@ -25,13 +30,16 @@
         </div>
     </nav>
     <div class="navbar navbar-inverse navbar-fixed-bottom menuSup footerindex">
-        <div class="container">
-            <p class="navbar-text pull-left">
-                © 2018 - AprenGeografia.cat
-            </p>
+        <div class="containerlogo">
+            <a href="https://dinahosting.com/">
+                <img class="imagelogo1" src="~/Content/Images/dinahosting.jpg" />
+            </a>
+            <a href="http://websalpunt.cat/">
+                <img class="imagelogo2" src="~/Content/Images/puntcat.png" />
+            </a>
         </div>
     </div>
-    <div class="col-lg-12"></div>
+    <div class="col-lg-1"></div>
     <div class="container body-content">
         @RenderBody()
     </div>
